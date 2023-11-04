@@ -1,9 +1,5 @@
 # Amazon Clone
 
-![Amazon Clone Screenshot](images/ss1.png)
-
-![Amazon Clone Screenshot](images/ss2.png)
-
 This project is an HTML and CSS clone of the Amazon home page, designed as a single-page application. It aims to replicate the look and feel of Amazon's homepage, providing a practical exercise in web development and design.
 
 ## Features
@@ -30,7 +26,9 @@ To view this Amazon clone, simply clone or download the repository to your local
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
+![Amazon Clone Screenshot](images/ss1.png)
+
+![Amazon Clone Screenshot](images/ss2.png)
 
 ## Author
 
