@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin:0;
     font-family: arial;
@@ -32,6 +35,7 @@
 
 .border:hover {
     border: 1px solid white;
+    transition: border-color 0.3s ease;
 }
 
  /* box2 */
@@ -92,6 +96,7 @@
 
 .nav-search:hover{
     border: 2px solid orange;
+    transition: border-color 0.3s ease;
 }
 
 .nav-location{
@@ -140,6 +145,28 @@ span{
 .panel-options p{
     display: inline;
     margin-left: 15px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.panel-options p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #febd68;
+    transition: width 0.3s ease-in-out;
+}
+
+.panel-options p:hover{
+    color: #febd68;
+}
+
+.panel-options p:hover::after {
+    width: 100%;
 }
 
 .panel-options{
@@ -150,6 +177,11 @@ span{
 .panel-deals{
     font-size: .9rem;
     font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.panel-deals:hover{
+    color: #febd68;
 }
 
 /* hero section */
@@ -161,6 +193,10 @@ span{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    animation-name: fadeInHero;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .hero-message{
@@ -195,6 +231,12 @@ span{
     background-color: white;
     padding: 20px 0px 15px;
     margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .box-image{
@@ -210,6 +252,11 @@ span{
 
 .box-content p{
     color: #007185;
+    transition: text-decoration 0.3s ease;
+}
+
+.box-content p:hover{
+    text-decoration: underline;
 }
 
 /* footer */
@@ -226,6 +273,11 @@ footer{
     justify-content: center;
     align-items: center;
     font-size: .85rem;
+    transition: background-color 0.3s ease;
+}
+
+.footerpanel1:hover{
+    background-color: #4a5a6a;
 }
 
 .footerpanel2{
@@ -246,6 +298,12 @@ ul a {
     font-size: .85rem;
     margin-top: 10px;
     color: #dddddd;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+ul a:hover {
+    color: #febd68;
+    text-decoration: underline;
 }
 
 .footerpanel3{
@@ -279,4 +337,9 @@ ul a {
 
 .copyright{
     text-align: center;
+}
+
+@keyframes fadeInHero {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
